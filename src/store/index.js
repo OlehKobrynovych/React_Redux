@@ -1,5 +1,5 @@
-import {createStore, applyMiddleware} from 'redux';
-import thunk from 'redux-thunk'
+import { applyMiddleware, createStore } from 'redux';
+import thunk from 'redux-thunk';
 
 
 const initialState = {
@@ -52,7 +52,8 @@ const reducer = (state = initialState, action) => {
     }
     
     
-    export const store = createStore(reducer,applyMiddleware(thunk))
+    export const store = createStore(reducer, applyMiddleware(thunk));
+
 
     export const setUserThunk = () => (dispatch) => {
         fetch('https://jsonplaceholder.typicode.com/posts')
