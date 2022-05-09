@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
+import TodoCard from "./TodoCard";
 
 
 const FinishTodo = () => {
@@ -11,22 +12,10 @@ const FinishTodo = () => {
         dispatch({type:'REMOVE_FINISH_TODOS', payload: id })
     }
 
-    const remove = (id) => {
-        dispatch({type: 'REMOVE_POST', payload: id})
-    }
-
     return ( 
         <div>
             { posts.filter(el=>finishId.includes(el.id)).map((el) =>(
-                        <div key={el.id} className='cart_wrapper' >
-                            <div>Id: {el.id}</div>
-                            <div>UserId: {el.userId}</div>
-                            <div><span className='title_text'>Title:</span> {el.title}</div>
-                            <div><span className='title_text'>Body:</span> {el.body}</div>
-                            <button onClick={() => remove(el.id)} >Delete</button>
-                            <input type='button' onClick={() => handleRemoveTodo(el.id)} value='Not done' />
-
-                        </div>
+                         <TodoCard key={el.id} id={el.id} userId={el.userId} title={el.title} body={el.body} handleClick={handleRemoveTodo} />
                     ) )
 
             }

@@ -15,7 +15,7 @@ const FilterUser = () => {
 
     return (
         <div>
-            <span>Select User</span>
+            <span className='px-3'>Select User</span>
             <select onChange={(e)=>hendleChenge(e.target.value)} >
                 <option value={null}></option>
                 <option value={1} >1</option>

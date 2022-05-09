@@ -1,12 +1,15 @@
+import Container  from 'react-bootstrap/Container';
 import './App.css';
-import Todos from './component/todos';
+import Todos from './component/Todos';
 
 
 function App() {
   return (
-    <div>
-      <Todos/>
-    </div>
+      <Container >
+        {/* <Row> */}
+          <Todos/>
+        {/* </Row> */}
+      </Container>
   );
 }
 
