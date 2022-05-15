@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button'
 import { useRef, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { Col } from 'react-bootstrap';
+import { Col, Form } from 'react-bootstrap';
 
 
 const AddPosts = () => {
@@ -45,16 +45,16 @@ const AddPosts = () => {
 
     return (
         <>
-            <form className="w-50 mx-auto">
-                <Col xs={12} className="my-1">
-                    <label>Enter title:</label>
-                    <input className="w-100" ref={inputTitleRef} placeholder='Title' type="search" onChange={(e)=>settitleText(e.target.value)} value={titleText} ></input>
-                </Col>
+            <Form className="w-50 mx-auto">
+                <Form.Group xs={12} className="my-1" controlId="formBasicTitle">
+                    <Form.Label>Enter title:</Form.Label>
+                    <Form.Control className="w-100" ref={inputTitleRef} placeholder='Title' type="search" onChange={(e)=>settitleText(e.target.value)} value={titleText} ></Form.Control>
+                </Form.Group>
   
-                <Col xs={12} className="my-1">
-                    <label>Enter body:</label>
-                    <input className="w-100" ref={inputBodyRef} placeholder='Body' type="search" onChange={(e)=>setbodyText(e.target.value)} value={bodyText} ></input>
-                </Col>
+                <Form.Group xs={12} className="my-1" controlId="formBasicBody">
+                    <Form.Label>Enter body:</Form.Label>
+                    <Form.Control className="w-100" ref={inputBodyRef} placeholder='Body' type="search" onChange={(e)=>setbodyText(e.target.value)} value={bodyText} ></Form.Control>
+                </Form.Group>
 
                 <Col xs={12} className="my-3">
                     {
@@ -70,7 +70,7 @@ const AddPosts = () => {
                     <Button className='w-100' type='submit' variant="primary" onClick={(e) => hendleSubmit(e)}>Add post</Button>
                 </Col>
 
-            </form>
+            </Form>
         </>
     )
 }

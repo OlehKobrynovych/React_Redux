@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
+import Form from 'react-bootstrap/Form'
 
 
 const FilterUser = () => {
@@ -14,9 +15,9 @@ const FilterUser = () => {
     }
 
     return (
-        <div>
+        <div className='w-25'>
             <span className='px-3'>Select User</span>
-            <select onChange={(e)=>hendleChenge(e.target.value)} >
+            <Form.Select size="sm" onChange={(e)=>hendleChenge(e.target.value)} >
                 <option value={null}></option>
                 <option value={1} >1</option>
                 <option value={2} >2</option>
@@ -28,7 +29,7 @@ const FilterUser = () => {
                 <option value={8} >8</option>
                 <option value={9} >9</option>
                 <option value={10} >10</option>
-            </select>
+            </Form.Select>
         </div>
     )
 }

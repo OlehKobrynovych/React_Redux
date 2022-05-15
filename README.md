@@ -37,3 +37,4 @@ Project uses:
 * React (useState, useEffect, useMemo, React.lazy, React.memo, ...)
 * React-redux (useDispatch, useSelector)
 * Redux-thunk
+* React-bootstrap
