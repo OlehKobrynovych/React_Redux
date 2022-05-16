@@ -1,8 +1,8 @@
-# React_Redux
+# React_todos_Redux
 
 JSONPlaceholder is a free online REST API that you can use whenever you need some fake data.
 
-https://OlehKobrynovych.github.io/React_Redux
+https://OlehKobrynovych.github.io/React_todos_Redux
 
 
 ## Table of contents
@@ -15,7 +15,7 @@ https://OlehKobrynovych.github.io/React_Redux
 
 First clone this repository.
 ```bash
-$ git clone https://github.com/OlehKobrynovych/React_Redux.git
+$ git clone https://github.com/OlehKobrynovych/React_todos_Redux.git
 ```
 
 Install dependencies. Make sure you already have [`nodejs`](https://nodejs.org/en/) & [`npm`](https://www.npmjs.com/) installed in your system.
