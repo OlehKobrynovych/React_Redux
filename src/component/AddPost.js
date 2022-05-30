@@ -13,6 +13,7 @@ const AddPosts = () => {
     const inputTitleRef = useRef(null)
     const inputBodyRef = useRef(null)
     const userId = useSelector(state=>state.userId)
+   
 
 
     const hendleSubmit = (e) => {
@@ -48,12 +49,16 @@ const AddPosts = () => {
             <Form className="w-50 mx-auto">
                 <Form.Group xs={12} className="my-1" controlId="formBasicTitle">
                     <Form.Label>Enter title:</Form.Label>
-                    <Form.Control className="w-100" ref={inputTitleRef} placeholder='Title' type="search" onChange={(e)=>settitleText(e.target.value)} value={titleText} ></Form.Control>
+                    <Form.Control className="w-100" ref={inputTitleRef} placeholder='Title' 
+                        type="search" onChange={(e)=>settitleText(e.target.value)} 
+                        value={titleText} ></Form.Control>
                 </Form.Group>
   
                 <Form.Group xs={12} className="my-1" controlId="formBasicBody">
                     <Form.Label>Enter body:</Form.Label>
-                    <Form.Control className="w-100" ref={inputBodyRef} placeholder='Body' type="search" onChange={(e)=>setbodyText(e.target.value)} value={bodyText} ></Form.Control>
+                    <Form.Control className="w-100" ref={inputBodyRef} placeholder='Body' 
+                        type="search" onChange={(e)=>setbodyText(e.target.value)} 
+                        value={bodyText} ></Form.Control>
                 </Form.Group>
 
                 <Col xs={12} className="my-3">
@@ -69,7 +74,6 @@ const AddPosts = () => {
                 <Col xs={12} className="my-3">
                     <Button className='w-100' type='submit' variant="primary" onClick={(e) => hendleSubmit(e)}>Add post</Button>
                 </Col>
-
             </Form>
         </>
     )

@@ -5,6 +5,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(183,222,237);
+  background: -moz-linear-gradient(top,  rgba(183,222,237,1) 0%, rgba(113,206,239,1) 50%, rgba(183,222,237,1) 100%);
+  background: -webkit-linear-gradient(top,  rgba(183,222,237,1) 0%,rgba(113,206,239,1) 50%,rgba(183,222,237,1) 100%);
+  background: linear-gradient(to bottom,  rgba(183,222,237,1) 0%,rgba(113,206,239,1) 50%,rgba(183,222,237,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#b7deed',GradientType=0 );
+
+}
+
+.gradient {
+  background-image: -webkit-linear-gradient(90deg, #9c169a 0%, #92e310 100%);
+  background-image:    -moz-linear-gradient(90deg, #9c169a 0%, #92e310 100%);
+  background-image:     -ms-linear-gradient(90deg, #9c169a 0%, #92e310 100%);
 }
 
 code {
@@ -13,11 +25,12 @@ code {
 }
 
 .cart_wrapper {
-  border: 1px solid rgb(204, 204, 204);
+  border: 4px solid rgb(15 198 81);
   padding: 8px;
-  /* margin: 6px 8px; */
   margin-top: 6px;
-  height: 240px;
+  height: auto;
+  font-size: 16px;
+  color: #3118f5;
 }
 
 .title_text {
@@ -46,23 +59,41 @@ code {
 
 }
 
-/* .deleteBtn::before {
-  content: '';
-  width: 100px;
-  height: 100px;
-  background-color: chartreuse;
-  position: absolute;
-  right: -200%;
-  top: 0;
-}
-
-.deleteBtn::before:hover {
-  position: absolute;
-  right: -50%;
-  top: 0;
-  z-index: 2;
-} */
-
 .deleteBtn:hover {
   transform: scale(1.2);
+}
+
+/* ------------todos__title--- */
+
+.todos__title {
+  text-align: center;
+  font-size: 74px;
+  color: #51c0e2;
+  font-family: Arial Black, Gadget, sans-serif;
+  font-weight: bold;
+  text-shadow: 0px 0px 0 rgb(60,171,205),
+               1px 1px 0 rgb(52,163,197),
+               2px 2px 0 rgb(45,156,190),
+               3px 3px 0 rgb(38,149,183),
+               4px 4px 0 rgb(30,141,175),
+               5px 5px 0 rgb(23,134,168),
+               6px 6px 0 rgb(16,127,161),
+               7px 7px 0 rgb(8,119,153),
+               8px 8px 0 rgb(1,112,146),
+               9px 9px 0 rgb(-6,105,139),
+               10px 10px 0 rgb(-14,97,131),
+               11px 11px 0 rgb(-21,90,124),
+               12px 12px  0 rgb(-28,83,117),
+               13px 13px 12px rgba(0,0,0,0.52),
+               13px 13px 1px rgba(0,0,0,0.5),
+               0px 0px 12px rgba(0,0,0,.2);
+}
+
+.editNote-wrap {
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  background-color: aliceblue;
 }

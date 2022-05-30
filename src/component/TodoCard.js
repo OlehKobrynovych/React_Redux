@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button'
 import { useDispatch } from "react-redux";
 
-const TodoCard = ({id, userId, title, body, handleClick}) => {
+const TodoCard = ({id, userId, title, body, handleClick,handleClickEdit }) => {
     const dispatch = useDispatch()
 
     const remove = (id) => {
@@ -10,13 +10,14 @@ const TodoCard = ({id, userId, title, body, handleClick}) => {
     
     return (
         <div className='cart_wrapper' >
-            <div>Id: {id}</div>
+            <div><h3>Id: {id}</h3></div>
             {/* {userId && <div>UserId: {userId}</div>} */}
-            <div>UserId: {userId}</div>
-            <div><span className='title_text'>Title:</span> {title}</div>
-            <div><span className='title_text'>Body:</span> {body}</div>
+            <div><h3>UserId: {userId}</h3></div>
+            <div><h3><span className='title_text'>Title:</span> {title}</h3></div>
+            <div><h3><span className='title_text'>Body:</span> {body}</h3></div>
             <Button className="m-3 " variant="danger" onClick={() => remove(id)}>Delete</Button>
             <Button className="m-3 " variant="primary" onClick={() => handleClick(id)}>Is done</Button>
+            <Button className="m-3 " variant="primary" onClick={() => handleClickEdit(id)}>Edit note</Button>
         </div>
     )
 }
