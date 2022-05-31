@@ -97,3 +97,35 @@ code {
   width: 600px;
   background-color: aliceblue;
 }
+
+.todos__post-title__not-fulfilled {
+  font-size: 59px;
+  color: #d96c29;
+  font-family: "Arial Black", Gadget, sans-serif;
+  text-shadow: 0px 0px 0 rgb(209,100,33),
+               1px 1px 0 rgb(200,91,24),
+               2px 2px 0 rgb(192,83,16),
+               3px 3px 0 rgb(184,75,8),
+               4px 4px 0 rgb(175,66,0),
+               5px 5px 0 rgb(167,58,0),
+               6px 6px  0 rgb(159,50,0),
+               7px 7px 6px rgba(0,0,0,0.6),
+               7px 7px 1px rgba(0,0,0,0.5),
+               0px 0px 6px rgba(0,0,0,.2);
+}
+
+.todos__post-title__fulfilled  {
+  font-size: 59px;
+  color: #1eb53a;
+  font-family: "Arial Black", Gadget, sans-serif;
+  text-shadow: 0px 0px 0 rgb(22,173,50),
+               1px 1px 0 rgb(13,164,41),
+               2px 2px 0 rgb(5,156,33),
+               3px 3px 0 rgb(-3,148,25),
+               4px 4px 0 rgb(-12,139,16),
+               5px 5px 0 rgb(-20,131,8),
+               6px 6px  0 rgb(-28,123,0),
+               7px 7px 6px rgba(0,0,0,0.6),
+               7px 7px 1px rgba(0,0,0,0.5),
+               0px 0px 6px rgba(0,0,0,.2);
+}

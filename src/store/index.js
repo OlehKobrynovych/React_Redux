@@ -28,6 +28,17 @@ const reducer = (state = initialState, action) => {
                     ...state.posts
                 ]
             } 
+        case 'ADD_EDIT_POST':
+            return {
+                ...state,
+                posts: state.posts.map(el =>{
+                    if (el.id === action.payload.id) {
+                        el.title = action.payload.title;
+                        el.body = action.payload.body;
+                    }
+                    return el
+                })
+            } 
         case 'SET_SELECT_USERID':
             return {
                 ...state,

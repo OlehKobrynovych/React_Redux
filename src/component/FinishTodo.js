@@ -15,7 +15,8 @@ const FinishTodo = () => {
     return ( 
         <div>
             { posts.filter(el=>finishId.includes(el.id)).map((el) =>(
-                         <TodoCard key={el.id} id={el.id} userId={el.userId} title={el.title} body={el.body} handleClick={handleRemoveTodo} />
+                         <TodoCard key={el.id} id={el.id} userId={el.userId} 
+                            title={el.title} body={el.body} handleClick={handleRemoveTodo} />
                     ) )
 
             }
