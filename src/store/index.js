@@ -67,6 +67,7 @@ const reducer = (state = initialState, action) => {
 
 
     export const setUserThunk = () => (dispatch) => {
+        // fetch('https://jsonplaceholder.typicode.com/posts?_limit=10')
         fetch('https://jsonplaceholder.typicode.com/posts')
         .then(response => response.json())
         .then(json => dispatch({type:'SET_USER', payload: json}) )
